@@ -51,6 +51,9 @@ public class Main {
         if (capslock == true && shift_down == true) state = "one";
         if (capslock == true && shift_down == false) state = "two";
         if (capslock == false && shift_down == true) state = "three";
+        if (capslock == true && shift_up == true) state = "four";
+        if (capslock == false && shift_up == true) state = "five";
+
         return state;
     }
 }

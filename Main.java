@@ -19,10 +19,10 @@ public class Main {
         int len = 0;
         while (len < array.length) {
 
-            if ((array[len] == SHIFT_DOWN) || (array[len] == SHIFT_UP) || (array[len] == CAPSLOCK)) {
-                if (array[len] == SHIFT_DOWN) shift_down = true;
-                if (array[len] == SHIFT_UP) shift_up = true;
-                if (array[len] == CAPSLOCK) capslock = true;
+            if ((array[len].equalsIgnoreCase(SHIFT_DOWN)) || (array[len].equalsIgnoreCase(SHIFT_UP)) || (array[len].equalsIgnoreCase(CAPSLOCK))) {
+                if (array[len].equalsIgnoreCase(SHIFT_DOWN)) shift_down = true;
+                if (array[len].equalsIgnoreCase(SHIFT_UP)) shift_up = true;
+                if (array[len].equalsIgnoreCase(CAPSLOCK)) capslock = true;
                 state();
             } else {
                 switch (state) {

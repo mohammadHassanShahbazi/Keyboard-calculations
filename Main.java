@@ -38,6 +38,14 @@ public class Main {
                         System.out.println(" three ");
                         System.out.println(array[len] + " ");
                         break;
+                    case "four":
+                        System.out.println("four");
+                        System.out.println(array[len] + " ");
+                        break;
+                    case "five":
+                        System.out.println("five");
+                        System.out.println(array[len] + " ");
+                        break;
                     default:
                         break;
                 }

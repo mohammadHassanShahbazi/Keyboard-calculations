@@ -43,7 +43,6 @@ public class Main {
                         System.out.println(array[len] + " ");
                         break;
                     case "five":
-                        System.out.println("five");
                         System.out.println(array[len] + " ");
                         break;
                     default:
@@ -61,6 +60,7 @@ public class Main {
         if (capslock == false && shift_down == true) state = "three";
         if (capslock == true && shift_up == true) state = "four";
         if (capslock == false && shift_up == true) state = "five";
+        if (capslock == false && shift_down == false) state = "five";
 
         return state;
     }

@@ -5,7 +5,7 @@ public class Main {
     public static final String SHIFT_UP = "shift_up";
     public static final String SHIFT_DOWN = "shift_down";
     public static final String CAPSLOCK = "CAPSLOCK";
-    public static String state = "";
+    public static String state = "five";
     public static boolean shift_down = false;
     public static boolean shift_up = false;
     public static boolean capslock = false;
@@ -43,9 +43,7 @@ public class Main {
                         System.out.println(array[len] + " ");
                         break;
                     case "five":
-                        System.out.println(array[len] + " ");
-                        break;
-                    default:
+                        System.out.print(array[len] + " ");
                         break;
                 }
             }
@@ -54,11 +52,11 @@ public class Main {
     }
 
     private static String state() {
-        state = "";
+
         if (capslock == true && shift_down == true) state = "one";
         if (capslock == true && shift_down == false) state = "two";
         if (capslock == false && shift_down == true) state = "three";
-        if (capslock == true && shift_up == true) state = "four";
+        if (capslock == true && shift_up == true) state = "two";
         if (capslock == false && shift_up == true) state = "five";
         if (capslock == false && shift_down == false) state = "five";
 

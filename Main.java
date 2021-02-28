@@ -20,9 +20,18 @@ public class Main {
         while (len < array.length) {
 
             if ((array[len].equalsIgnoreCase(SHIFT_DOWN)) || (array[len].equalsIgnoreCase(SHIFT_UP)) || (array[len].equalsIgnoreCase(CAPSLOCK))) {
-                if (array[len].equalsIgnoreCase(SHIFT_DOWN)) shift_down = true;
-                if (array[len].equalsIgnoreCase(SHIFT_UP)) shift_up = true;
-                if (array[len].equalsIgnoreCase(CAPSLOCK)) capslock = true;
+                if (array[len].equalsIgnoreCase(SHIFT_DOWN)) {
+                    shift_down = true;
+                }
+                if (array[len].equalsIgnoreCase(SHIFT_UP)) {
+                    shift_up = true;
+                    shift_down = false;
+                }
+                if (array[len].equalsIgnoreCase(CAPSLOCK)) {
+                    if (capslock == true) {
+                        capslock = false;
+                    } else capslock = true;
+                }
                 state();
             } else {
                 switch (state) {
@@ -31,8 +40,9 @@ public class Main {
                         System.out.print(array[len] + " ");
                         break;
                     case "two":
-                        System.out.print(" two ");
-                        System.out.println(array[len] + " ");
+                        if ((int) array[len].charAt(0) >= 97 && (int) array[len].charAt(0) <= 122) {
+                            System.out.print((char) ((int) array[len].charAt(0) - 32) + " ");
+                        } else System.out.print(array[len] + " ");
                         break;
                     case "three":
                         System.out.println(" three ");

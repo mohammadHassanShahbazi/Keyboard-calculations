@@ -58,12 +58,12 @@ public class Main {
                         if ((int) array[len].charAt(0) >= 97 && (int) array[len].charAt(0) <= 122) {
                             System.out.print((char) ((int) array[len].charAt(0) - 32) + " ");
                         }
+                        //for ,./;'
                         if ((int) array[len].charAt(0) == 44) System.out.print(alphabet[0] + " ");
                         if ((int) array[len].charAt(0) == 46) System.out.print(alphabet[1] + " ");
                         if ((int) array[len].charAt(0) == 47) System.out.print(alphabet[2] + " ");
                         if ((int) array[len].charAt(0) == 59) System.out.print(alphabet[3] + " ");
                         if ((int) array[len].charAt(0) == 39) System.out.print(alphabet[4] + " ");
-
                         break;
                     case "four":
                         System.out.println("four");

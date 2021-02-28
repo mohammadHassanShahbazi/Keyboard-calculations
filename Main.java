@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
-
+    public static String[] alphabet = {"<", ">", "?", ":", "\""};
+    public static String[] symbol = {")", "!", "@", "#", "$", "%", "^", "&", "*", "("};
     public static final String SHIFT_UP = "shift_up";
     public static final String SHIFT_DOWN = "shift_down";
     public static final String CAPSLOCK = "CAPSLOCK";
@@ -45,8 +46,24 @@ public class Main {
                         } else System.out.print(array[len] + " ");
                         break;
                     case "three":
-                        System.out.println(" three ");
-                        System.out.println(array[len] + " ");
+                        //for 0 to 9
+                        if ((int) array[len].charAt(0) >= 48 && (int) array[len].charAt(0) <= 57) {
+                            for (int i = 48, j = 0; i <= 57; i++, j++) {
+                                if ((int) array[len].charAt(0) == i) {
+                                    System.out.print(symbol[j] + " ");
+                                }
+                            }
+                        }
+                        //for a to z
+                        if ((int) array[len].charAt(0) >= 97 && (int) array[len].charAt(0) <= 122) {
+                            System.out.print((char) ((int) array[len].charAt(0) - 32) + " ");
+                        }
+                        if ((int) array[len].charAt(0) == 44) System.out.print(alphabet[0] + " ");
+                        if ((int) array[len].charAt(0) == 46) System.out.print(alphabet[1] + " ");
+                        if ((int) array[len].charAt(0) == 47) System.out.print(alphabet[2] + " ");
+                        if ((int) array[len].charAt(0) == 59) System.out.print(alphabet[3] + " ");
+                        if ((int) array[len].charAt(0) == 39) System.out.print(alphabet[4] + " ");
+
                         break;
                     case "four":
                         System.out.println("four");

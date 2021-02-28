@@ -65,11 +65,8 @@ public class Main {
                         if ((int) array[len].charAt(0) == 59) System.out.print(alphabet[3] + " ");
                         if ((int) array[len].charAt(0) == 39) System.out.print(alphabet[4] + " ");
                         break;
+
                     case "four":
-                        System.out.println("four");
-                        System.out.println(array[len] + " ");
-                        break;
-                    case "five":
                         System.out.print(array[len] + " ");
                         break;
                 }
@@ -84,8 +81,8 @@ public class Main {
         if (capslock == true && shift_down == false) state = "two";
         if (capslock == false && shift_down == true) state = "three";
         if (capslock == true && shift_up == true) state = "two";
-        if (capslock == false && shift_up == true) state = "five";
-        if (capslock == false && shift_down == false) state = "five";
+        if (capslock == false && shift_up == true) state = "four";
+        if (capslock == false && shift_down == false) state = "four";
 
         return state;
     }

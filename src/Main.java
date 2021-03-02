@@ -37,8 +37,21 @@ public class Main {
             } else {
                 switch (state) {
                     case "one":
-                        System.out.print(" one ");
-                        System.out.print(array[len] + " ");
+                        if ((int) array[len].charAt(0) >= 97 && (int) array[len].charAt(0) <= 122) {
+                            System.out.print(array[len] + " ");
+                        }
+                        if ((int) array[len].charAt(0) >= 48 && (int) array[len].charAt(0) <= 57) {
+                            for (int i = 48, j = 0; i <= 57; i++, j++) {
+                                if ((int) array[len].charAt(0) == i) {
+                                    System.out.println(symbol[j] + " ");
+                                }
+                            }
+                        }
+                        if ((int) array[len].charAt(0) == 44) System.out.println(alphabet[0] + " ");
+                        if ((int) array[len].charAt(0) == 46) System.out.println(alphabet[1] + " ");
+                        if ((int) array[len].charAt(0) == 47) System.out.println(alphabet[2] + " ");
+                        if ((int) array[len].charAt(0) == 59) System.out.println(alphabet[3] + " ");
+                        if ((int) array[len].charAt(0) == 39) System.out.println(alphabet[4] + " ");
                         break;
                     case "two":
                         if ((int) array[len].charAt(0) >= 97 && (int) array[len].charAt(0) <= 122) {
@@ -71,8 +84,10 @@ public class Main {
                         break;
                 }
             }
+
             len++;
         }
+
     }
 
     private static String state() {

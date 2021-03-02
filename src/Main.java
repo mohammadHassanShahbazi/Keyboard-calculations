@@ -6,7 +6,7 @@ public class Main {
     public static final String SHIFT_UP = "shift_up";
     public static final String SHIFT_DOWN = "shift_down";
     public static final String CAPSLOCK = "CAPSLOCK";
-    public static String state = "five";
+    public static String state = "four";
     public static boolean shift_down = false;
     public static boolean shift_up = false;
     public static boolean capslock = false;
